@@ -60,11 +60,13 @@ function Body(){
    }
 
    function delUser(index){
-      let arrBefore = userData.slice(0, index),
-          arrAfter = userData.slice(index+1),
-          res = [];
-      res = arrBefore.concat(arrAfter);
-      setUserData(res);
+      if(confirm('請問是否確認要刪除' + userData[index].name + ' ?')){
+         let arrBefore = userData.slice(0, index),
+             arrAfter = userData.slice(index+1),
+             res = [];
+         res = arrBefore.concat(arrAfter);
+         setUserData(res);
+      }
    }
 
    function closeModal(action, index) {
@@ -124,10 +126,16 @@ function Body(){
             resAccount = accountList.slice(0);
             resAccount.push(userName.value);
 
-            console.log(tmp);
-            console.log(resAccount);
             setUserData(tmp);
             setAccountList(resAccount);
+            toast.success('使用者 '+newData.name+' 已新增', {
+               position: "top-right",
+               autoClose: 5000,
+               hideProgressBar: false,
+               closeOnClick: true,
+               pauseOnHover: true,
+               draggable: true
+            });
          }
 
          if(action == 'modify'){
@@ -137,6 +145,14 @@ function Body(){
             arrBefore.push(newData);
             res = arrBefore.concat(arrAfter);
             setUserData(res);
+            toast.success(newData.name + ' 的資料已修改', {
+               position: "top-right",
+               autoClose: 5000,
+               hideProgressBar: false,
+               closeOnClick: true,
+               pauseOnHover: true,
+               draggable: true
+            });
          }
       }
 
