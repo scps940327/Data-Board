@@ -1,7 +1,8 @@
 @import "component/color.scss";
 @import "component/custom.scss";
 
-div{
+div,
+input{
   box-sizing: border-box;
 }
 
@@ -19,5 +20,11 @@ body{
 }
 
 .content_wrapper{
-  
+  max-width: 1300px;
+  margin: auto;
+  width: 100%;
+}
+
+.action-modal{
+
 }

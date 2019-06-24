@@ -7,7 +7,7 @@ module.exports = {
       //about:"./src/about.js"
   },
   output: {
-      path: __dirname + '/dist',
+      path: __dirname + '/docs',
       filename: "js/[name].js"
   },
   module: {
