@@ -46,7 +46,6 @@ function Body(){
          setAction('add');
          setmodifyModal(true);
       }
-      console.log(Array.isArray(accountList));
    }
 
    function modifyUser(info){
@@ -163,20 +162,14 @@ function Body(){
    }
 
    return(
-      <div className="content_wrapper px-3">
-         <div className="bg-white p-4">
-            <div className="text-right pb-2">
-               <button className="btn btn-info" onClick={addUserAction}>
-                  <i className="fas fa-plus"></i>
-                  <span className="pl-2">ADD</span>
-               </button>
-            </div>
-            <div className="row bg-light py-3">
-               <div className="col-1">NO.</div>
-               <div className="col-2">Name</div>
-               <div className="col-3">Phone</div>
-               <div className="col-4">Email</div>
-               <div className="col-2">Action</div>
+      <div className="content_wrapper px-sm-3">
+         <div className="bg-white p-sm-4 text-center">
+            <div className="row no-gutters bg-light py-3 mx-0">
+               <div className="col-1">NO</div>
+               <div className="col-2">姓名</div>
+               <div className="col-3">TEL</div>
+               <div className="col-4">信箱</div>
+               <div className="col-2">動作</div>
             </div>
             {userData.map((user, i) => 
             <UserInfoItem data = {user} index={i} key={'user' + i} modifyUser={modifyUser} delUser={delUser} />)}
@@ -184,6 +177,12 @@ function Body(){
                ? <ModifyModal action={action} modifyModal={modifyModal} closeModal={closeModal} modifyUserInfo={modifyUserInfo} checkAccount={checkAccount}/>
                : null
             }
+            <div className="text-right p-3 pb-sm-0 px-sm-0">
+               <button className="btn btn-info" onClick={addUserAction}>
+                  <i className="fas fa-plus"></i>
+                  <span className="pl-2">ADD</span>
+               </button>
+            </div>
          </div>
          <ToastContainer />
       </div>

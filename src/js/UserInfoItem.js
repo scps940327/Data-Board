@@ -8,13 +8,13 @@ function UserInfoItem({data, index, modifyUser, delUser}){
       index: index
    }
    return(
-      <div className="row border-bottom py-3">
+      <div className="row align-items-center border-bottom py-3 mx-0">
          <div className="col-1">{index+1}</div>
          <div className="col-2">{data.name}</div>
          <div className="col-3">{data.phone}</div>
          <div className="col-4">{data.email}</div>
          <div className="col-2">
-            <button type="button" className="bg-transparent border-0" onClick={() => delUser(index)}>
+            <button type="button" className="bg-transparent border-0 text-danger" onClick={() => delUser(index)}>
                <i className="fas fa-trash-alt"></i>
             </button>
             <button type="button" className="bg-transparent border-0" onClick={() => modifyUser(userInfo)}>
