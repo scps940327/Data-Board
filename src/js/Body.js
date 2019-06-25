@@ -75,37 +75,37 @@ function Body(){
              userPhone = document.getElementById('userPhone'),
              userEmail = document.getElementById('userEmail'),
              userPhoneVal;
-         if(!userName.value.length){
-            console.log(userName.value);
-            toast.error('請填入姓名！', {
-               position: "top-right",
-               autoClose: 3000,
-               hideProgressBar: true,
-               closeOnClick: true,
-               pauseOnHover: true,
-               draggable: true
-            });
-            userName.focus();
-            return false;
-         }
+         // if(!userName.value.length){
+         //    console.log(userName.value);
+         //    toast.error('請填入姓名！', {
+         //       position: "top-right",
+         //       autoClose: 3000,
+         //       hideProgressBar: true,
+         //       closeOnClick: true,
+         //       pauseOnHover: true,
+         //       draggable: true
+         //    });
+         //    userName.focus();
+         //    return false;
+         // }
 
-         if(checkAccount(userName.value)){
+         // if(checkAccount(userName.value)){
 
-         }
+         // }
 
-         if(!userEmail.value.length){
-            console.log(userEmail.value);
-            toast.error('請填入信箱！', {
-               position: "top-right",
-               autoClose: 3000,
-               hideProgressBar: true,
-               closeOnClick: true,
-               pauseOnHover: true,
-               draggable: true
-            });
-            userEmail.focus();
-            return false;
-         }
+         // if(!userEmail.value.length){
+         //    console.log(userEmail.value);
+         //    toast.error('請填入信箱！', {
+         //       position: "top-right",
+         //       autoClose: 3000,
+         //       hideProgressBar: true,
+         //       closeOnClick: true,
+         //       pauseOnHover: true,
+         //       draggable: true
+         //    });
+         //    userEmail.focus();
+         //    return false;
+         // }
 
          if(!userPhone.value.length){
             userPhoneVal = modifyUserInfo.phone;
